@@ -1,4 +1,4 @@
-package TaskListModels;
+package com.circus.week6capstone.tasklistWeek6.Models;
 
 //POJO GOES IN THIS FILEEEEEEE
 
@@ -19,18 +19,18 @@ public class Task {
 	User user;
 	String description;
 	String dueDate;
-	boolean complete;
+//	boolean complete;
 	public Task() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Task(Long id, User user, String description, String dueDate, boolean complete) {
+	public Task(Long id, User user, String description, String dueDate) { //TOOK OUT BOOLEAN COMPLETE
 		super();
 		this.id = id;
 		this.user = user;
 		this.description = description;
 		this.dueDate = dueDate;
-		this.complete = complete;
+//		this.complete = complete;
 	}
 	public Long getId() {
 		return id;
@@ -56,15 +56,14 @@ public class Task {
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
-	public boolean isComplete() {
-		return complete;
-	}
-	public void setComplete(boolean complete) {
-		this.complete = complete;
-	}
+//	public boolean isComplete() {
+//		return complete;
+//	}
+//	public void setComplete(boolean complete) {
+//		this.complete = complete;
+//	}
 	@Override
 	public String toString() {
-		return "Task [id=" + id + ", user=" + user + ", description=" + description + ", dueDate=" + dueDate
-				+ ", complete=" + complete + "]";
+		return "Task [id=" + id + ", user=" + user + ", description=" + description + ", dueDate=" + dueDate + "]";
 	}
 }
