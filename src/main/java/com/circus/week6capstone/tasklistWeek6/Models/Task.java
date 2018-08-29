@@ -18,18 +18,18 @@ public class Task {
 	@ManyToOne
 	User user;
 	String description;
-	String dueDate;
+	String due_date;
 //	boolean complete;
 	public Task() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Task(Long id, User user, String description, String dueDate) { //TOOK OUT BOOLEAN COMPLETE
+	public Task(Long id, User user, String description, String due_date) { //TOOK OUT BOOLEAN COMPLETE
 		super();
 		this.id = id;
 		this.user = user;
 		this.description = description;
-		this.dueDate = dueDate;
+		this.due_date = due_date;
 //		this.complete = complete;
 	}
 	public Long getId() {
@@ -50,11 +50,11 @@ public class Task {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getDueDate() {
-		return dueDate;
+	public String getDue_date() {
+		return due_date;
 	}
-	public void setDueDate(String dueDate) {
-		this.dueDate = dueDate;
+	public void setDue_date(String due_date) {
+		this.due_date = due_date;
 	}
 //	public boolean isComplete() {
 //		return complete;
@@ -64,6 +64,6 @@ public class Task {
 //	}
 	@Override
 	public String toString() {
-		return "Task [id=" + id + ", user=" + user + ", description=" + description + ", dueDate=" + dueDate + "]";
+		return "Task [id=" + id + ", user=" + user + ", description=" + description + ", due_date=" + due_date + "]";
 	}
 }

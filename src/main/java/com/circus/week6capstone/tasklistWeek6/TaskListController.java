@@ -34,17 +34,7 @@ public class TaskListController {
 //		itemsDao.update(item);
 //		return new ModelAndView("redirect:/edit-item");
 //}
-//	
-//	@RequestMapping(value="/edit-item", method=RequestMethod.POST)
-//	public ModelAndView viewEditForm() {
-//		return new ModelAndView("redirect:/editItem");
-//}
-//	
-	
-	@RequestMapping("/add-task")
-	public ModelAndView showAddItemForm() {			//CHANGE MADE: ADDED 2 EXTRA THINGS IN (), what goes there??
-		return new ModelAndView("addItem", "name", "add Item"); //jsp file (in the jsp file, tell it the next place you want it to go is the submit-form method in the controller???
-	}
+
 	
 //button -> controller -> dao -> database
 

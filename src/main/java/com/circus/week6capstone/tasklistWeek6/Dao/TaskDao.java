@@ -25,6 +25,11 @@ public class TaskDao {
 		return em.createQuery("FROM Task", Task.class).getResultList();
 		
 	}
+	
+	public Task findById(Long id) {
+		return em.find(Task.class, id);
+	}
+
 //	
 //	public Food findById(Long id) {
 //		return em.find(Food.class, id);
