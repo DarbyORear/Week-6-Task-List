@@ -23,7 +23,7 @@ public class TaskListController {
 	@RequestMapping("/")
 	public ModelAndView index() {
 		ModelAndView mav = new ModelAndView("index");
-		//you can add expression language, expressions, etc. to a ModelAndView. it's complicated..but basically Spring 
+		//you can add expression language, expressions, etc. to a ModelAndView.
 		mav.addObject("task", taskdao.findAll());
 		return mav;
 	}
@@ -40,6 +40,11 @@ public class TaskListController {
 //		return new ModelAndView("redirect:/editItem");
 //}
 //	
+	
+	@RequestMapping("/add-task")
+	public ModelAndView showAddItemForm() {			//CHANGE MADE: ADDED 2 EXTRA THINGS IN (), what goes there??
+		return new ModelAndView("addItem", "name", "add Item"); //jsp file (in the jsp file, tell it the next place you want it to go is the submit-form method in the controller???
+	}
 	
 //button -> controller -> dao -> database
 

@@ -8,7 +8,18 @@
 <link rel="stylesheet" href="/theme.css" />
 </head>
 <body>
-<h1>These are the items in your to-do list:</h1>
+<h1>To do:</h1>
+	<ul>
+				<c:forEach var="mytask" items="${task}">
+					<!--  <a href="/index/${myitem.id}">${myitem.name}</a>-->
+					<li>${mytask.description}</li>
+					<li>${mytask.due_date}</li>
+				</c:forEach>
+	</ul>
+		
+		
 </body>
+		
 
+		
 </html>
